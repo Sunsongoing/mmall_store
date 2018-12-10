@@ -1,0 +1,40 @@
+.pg-content {
+    text-align: center;
+    color: #333;
+}
+
+.pagination {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.pg-content .pg-item {
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 15px;
+    margin: 0 2px;
+    /* border: 1px solid #ccc;
+    background: #eee; */
+    cursor: pointer;
+    /* 用户是否可以选择这个文本 */
+    /* -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; */
+}
+
+.pg-content .pg-item.disabled {
+    color: #ccc;
+    background: none;
+    cursor: auto;
+}
+
+.pg-content .pg-item.active {
+    color: #ccc;
+    background: none;
+    cursor: auto;
+    border: 1px solid #f6f6f6;
+}

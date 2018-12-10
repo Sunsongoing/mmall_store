@@ -1,0 +1,23 @@
+<div class="user-info">
+<div class="form-line">
+    <span class="label">用户名:</span>
+    <span class="text">{{username}}</span>
+</div>
+<div class="form-line">
+    <span class="label">手&nbsp;机:</span>
+    <input class="input" id="phone" value="{{phone}}" type="text" autocomplete="off"/>
+</div>
+<div class="form-line">
+    <span class="label">邮&nbsp;箱:</span>
+    <input class="input" id="email" value="{{email}}" type="text" autocomplete="off"/>
+</div>
+<div class="form-line">
+    <span class="label">问&nbsp;题:</span>
+    <input class="input" id="question" value="{{question}}" type="text" autocomplete="off"/>
+</div>
+<div class="form-line">
+    <span class="label">答&nbsp;案:</span>
+    <input class="input" id="answer" value="{{answer}}" type="text" autocomplete="off"/>
+</div>
+    <a href="javascript:;" class="btn btn-submit">提交</a>
+</div>

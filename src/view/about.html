@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%= require('html-loader!./layout/head-common.html')%>
+    <title>
+        <%=htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+    <%= require('html-loader!./layout/nav.html')%>
+    <%= require('html-loader!./layout/header.html')%>
+    <div class="crumb">
+        <div class="width">
+            <div class="crumb-con">
+                <a href="./index.html" class="link">MMall</a>
+                <span>></span>
+                <span class="link-text">
+                    <%=htmlWebpackPlugin.options.title %></span>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrap width">
+        <div class="panel">
+            <h1 class="panel-title">关于我们</h1>
+            <div class="panel-body">
+                欢迎访问mmall商城，这是一个简单前后端分离的电商网站
+            </div>
+        </div>
+    </div>
+
+    <%= require('html-loader!./layout/footer-common.html')%>
+</body>
+
+</html>
