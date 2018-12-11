@@ -43,15 +43,15 @@ var config = {
     output: {
         //生成文件的目录
         path: __dirname + '/dist/',
-        //多个入口文件时，动态配置名称
-        filename: 'js/[name].js',
         //访问路径
         publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.zjlssr.xyz/mmall-fe/dist/',
+        //多个入口文件时，动态配置名称
+        filename: 'js/[name].js',
     },
     //webpack-dev-server 配置
     devServer: {
         //配置根目录为dist
-        contentBase: __dirname + '/dist',
+        contentBase: __dirname + '/dist/',
         compress: true,
         port: 9000,
         inline: true,

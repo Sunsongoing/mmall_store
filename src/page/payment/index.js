@@ -20,8 +20,10 @@ var page = {
     // 加载detail数据
     loadPaymentInfo: function () {
         var _this = this,
-        paymentHtml = '',
+            paymentHtml = '',
             $pageWrap = $('.page-wrap');
+
+        _this.listenOrderStatus();
 
         $pageWrap.html('<div class="loading"></div>');
         _payment.getPaymentInfo(_this.data.orderNumber, function (res) {
@@ -38,10 +40,13 @@ var page = {
         var _this = this;
         //5s 一次  
         this.paymentTimer = window.setInterval(function () {
-            _payment.getPaymentStatus(_this.data.orderNumber, function (res) {
+            _payment.getPaymentStatus(_this.data.orderNumber, function (res, msg) {
                 if (res === true) {
                     window.location.href =
                         './result.html?type=payment&orderNumber=' + _this.data.orderNumber;
+                } else if (res === false) {
+                    window.location.href =
+                        './result.html?type=order-closed&orderNumber=' + _this.data.orderNumber;
                 }
             });
         }, 5000);;

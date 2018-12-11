@@ -9,7 +9,9 @@ $(function () {
         var orderNumber = _currency.getUrlParam('orderNumber'),
             $orderNumber = $element.find('.order-number');
         $orderNumber.attr('href', $orderNumber.attr('href') + orderNumber);
-    } //显示对应提示元素
+    } 
+    
+    //显示对应提示元素
     $element.show();
 
 });

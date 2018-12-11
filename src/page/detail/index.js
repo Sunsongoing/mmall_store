@@ -73,7 +73,7 @@ var page = {
     },
     // 处理数据
     filter:function(data){
-        data.subImage =  data.subImage.split(',');
+        data.subImages =  data.subImages.split(',');
     }
 
 }
