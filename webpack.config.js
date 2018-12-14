@@ -64,6 +64,8 @@ var config = {
                 '/mmall/': '/'
             }
         }]
+        // "dist": "WEBPACK_ENV=production webpack -p --progress --colors",
+  // "dist_win": "set WEBPACK_ENV=production && webpack -p --progress --colors"
     },
     externals: {
         'jquery': 'window.jQuery'
