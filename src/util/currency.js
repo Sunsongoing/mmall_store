@@ -4,7 +4,7 @@ var Hogan = require('hogan.js');
 
 //配置
 var conf = {
-    serverHost: '',
+    serverHost: 'mmall',
 }
 
 var _currency = {

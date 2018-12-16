@@ -23,8 +23,6 @@ var page = {
             paymentHtml = '',
             $pageWrap = $('.page-wrap');
 
-        _this.listenOrderStatus();
-
         $pageWrap.html('<div class="loading"></div>');
         _payment.getPaymentInfo(_this.data.orderNumber, function (res) {
             // 渲染html
@@ -44,7 +42,7 @@ var page = {
                 if (res === true) {
                     window.location.href =
                         './result.html?type=payment&orderNumber=' + _this.data.orderNumber;
-                } else if (res === false) {
+                } else if (res === false && msg ==="超过时间未支付，订单自动关闭") {
                     window.location.href =
                         './result.html?type=order-closed&orderNumber=' + _this.data.orderNumber;
                 }

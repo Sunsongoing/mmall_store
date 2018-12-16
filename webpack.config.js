@@ -42,7 +42,7 @@ var config = {
     },
     output: {
         //生成文件的目录
-        path: __dirname + '/dist/',
+        path: __dirname + '/dist',
         //访问路径
         publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.zjlssr.xyz/mmall-fe/dist/',
         //多个入口文件时，动态配置名称
@@ -51,13 +51,13 @@ var config = {
     //webpack-dev-server 配置
     devServer: {
         //配置根目录为dist
-        contentBase: __dirname + '/dist/',
+        contentBase: __dirname + '/dist',
         compress: true,
         port: 9000,
         inline: true,
         proxy: [{
             context: ['/user', '/product', '/order', '/shipping', '/cart'],
-            target: 'http://45.77.242.206:8080/mmall/',
+            target: 'http://45.77.242.206:8080/',
             changeOrigin: true,
             //重写cookie 路径  --- http-proxy-middleware
             cookiePathRewrite: {
