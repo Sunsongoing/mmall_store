@@ -15,7 +15,7 @@ var getHtmlConfig = function (name, title) {
         favicon: './favicon.ico',
         inject: true, //资源加入到底部
         hash: true, //加入版本号
-        chunks: ['common', name] //对应加载的资源
+        chunks: ['common', name] //选择使用哪些js
     }
 }
 //webpack config
